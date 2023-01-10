@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index.js" defer></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* border: 1px solid orange; */
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+    p {
+      border: 1px solid gray;
+      padding: 0.51rem;
+      margin: 12px;
+      background-color: aqua;
+    }
+    .contentEditable {
+      background-color: antiquewhite;
+      min-width: 400px;
+      max-height: 240px;
+      overflow-y: scroll;
+      border: 2px solid rebeccapurple;
+    }
+    /* Change the width of the scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 12px;
+    }
+
+    /* Change the background color of the scrollbar */
+    ::-webkit-scrollbar-thumb {
+      background-color: crimson;
+    }
+
+    /* Change the color of the scrollbar track */
+    ::-webkit-scrollbar-track {
+      background-color: #fff;
+    }
+    .contentEditable-container {
+      position: relative;
+    }
+    .popup {
+      position: absolute;
+      left: -50px;
+    }
+    .popup::before {
+      content: "";
+      display: block;
+      border-bottom: 1px dotted black;
+      width: 100%;
+      margin: 10px 0;
+      position: absolute;
+      top: 0px;
+    }
+    .inserter {
+      background-color: red;
+      width: 100%;
+      display: block;
+      height: 0;
+      /* border: 2px dotted orange; */
+    }
+  </style>
+  <body>
+    <main>
+      <div class="contentEditable-container">
+        <div class="contentEditable">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+          <p>9</p>
+          <p>10</p>
+        </div>
+        <div class="popup" id="ruleset">
+          <div class="popup-icon">
+            <span> ICON </span>
+          </div>
+        </div>
+       
+      </div>
+      <!-- ruleset block -->
+    </main>
+  </body>
+</html>
